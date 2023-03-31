@@ -1,4 +1,4 @@
-name: Demo on using variables
+- name: Demo on using variables
   hosts: all
   vars: 
    URL: play.google.com 
