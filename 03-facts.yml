@@ -5,3 +5,7 @@
   - name: task1
     ansible.builtin.debug:
      msg: OS Distribution = {{ansible_distribution}} 
+  
+  - name: Get the mac address of all the machines
+    ansible.builtin.debug:
+     msg: MAC addresses = {{ansible_default_ipv4.macaddress}}
