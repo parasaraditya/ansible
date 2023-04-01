@@ -9,3 +9,12 @@
     ansible.builtin.debug:
      msg: "{{OUT.stdout}}" 
   
+  - name: Daclaring the variable
+    ansible.builtin.set_fact:
+     STATUS: "{{OUT.rc}}"
+  
+  - name: Printing the EXIT CODE
+    ansible.builtin.debug:
+     msg: "{{STATUS}}"
+ 
+  
