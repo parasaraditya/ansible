@@ -1,7 +1,7 @@
 
 - name: Demo of all the facts
   hosts: all
-  tasts: 
+  tasks: 
   - name: task1
     ansible.builtin.debug:
      msg: OS Distribution = {{ansible_distribution}} 
