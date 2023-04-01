@@ -1,0 +1,6 @@
+- name: to check the uptime
+  hosts: all
+  tasks: 
+  - name: Execute the shell command
+    ansible.builtin.shell: uptime
+    register: OUT
