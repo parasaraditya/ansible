@@ -24,11 +24,12 @@
   ansible.builtin.copy:
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
+  notify: Restart Nginx
 
-- name: Restart frontend service
+- name: starting frontend service
   ansible.builtin.service:
     name: nginx
-    state: restarted
+    state: started
     enabled: true
      
 
