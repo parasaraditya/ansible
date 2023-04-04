@@ -36,9 +36,10 @@
 
 
 - name: Copying the systemd files to roboshop home directory
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: systemd.service
     dest: /etc/systemd/system/catalogue.service
+
   
 
 
