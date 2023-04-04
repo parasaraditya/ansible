@@ -1,0 +1,17 @@
+- name: Demo on the tags
+  hosts: all
+  tasks: 
+  - name: Performing web-svr installation
+    ansible.builtin.debug:
+     msg: Performing instlaation of web-svr
+    tags: web
+  
+  - name: Performing app-svr installation
+    ansible.builtin.debug:
+     msg: Performing instlaation of app-svr
+    tags: app
+
+    - name: Performing db installation
+    ansible.builtin.debug:
+     msg: Performing instlaation of db-svr
+    tags: db
