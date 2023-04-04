@@ -15,15 +15,15 @@
    state: absent
 
 - name: Copying the frontend content to nginx path 
-    ansible.builtin.copy:
-     src: /tmp/frontend-main/static
-     dest: /usr/share/nginx/html
-     remote_src: yes
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/static
+    dest: /usr/share/nginx/html
+    remote_src: yes
 
 - name: Copying the nginx config 
-    ansible.builtin.copy:
-     src: roboshop.conf
-     dest: /etc/nginx/default.d/roboshop.conf
+  ansible.builtin.copy:
+    src: roboshop.conf
+    dest: /etc/nginx/default.d/roboshop.conf
      
 
 
