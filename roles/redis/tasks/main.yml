@@ -1,0 +1,15 @@
+- name: Copying the redis.repo
+  ansible.builtin.copy:
+    src: redis.repo
+    dest: /etc/yum.repos.d/redis.repo
+
+- name: Install Redis
+  ansible.builtin.package: 
+   name: redis-6.2.7
+   state: present
+
+- name: Restarting {{COMPONENT}} service
+  ansible.builtin.service:
+    name: redis
+    state: restarted
+    enabled: true
