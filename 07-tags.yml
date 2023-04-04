@@ -11,7 +11,7 @@
      msg: Performing instlaation of app-svr
     tags: app
 
-    - name: Performing db installation
+  - name: Performing db installation
     ansible.builtin.debug:
      msg: Performing instlaation of db-svr
     tags: db
