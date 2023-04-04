@@ -8,8 +8,16 @@
    name: redis-6.2.11
    state: present
 
-- name: Restarting {{COMPONENT}} service
+- name: Updating the {{COMPONENT}} config
+  ansible.builtin.replace:
+    path: /etc/{{COMPONENT}}/{{COMPONENT}}.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+  notify: Restarting {{COMPONENT}} service
+
+- name: starting {{COMPONENT}} service
   ansible.builtin.service:
-    name: redis
-    state: restarted
+    name: "{{COMPONENT}}"
+    state: started
     enabled: true
+
