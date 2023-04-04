@@ -15,7 +15,7 @@
     replace: '0.0.0.0'
   notify: Restarting {{COMPONENT}} service
 
-- name: starting {{COMPONENT}} service
+- name: Restarting {{COMPONENT}} service
   ansible.builtin.service:
     name: "{{COMPONENT}}"
     state: started
