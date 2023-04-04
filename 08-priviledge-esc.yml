@@ -8,4 +8,4 @@
 
    - name: Displaying outpu
      ansible.builtin.debug:
-      msg: "{{OUT}.stdout}"
+      msg: "{{OUT.stdout}}"
