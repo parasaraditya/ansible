@@ -3,7 +3,7 @@
   tasks:
    - name: Executing shell command
      ansible.builtin.shell: id
-      msg: OUT
+     register: OUT
 
    - name: Displaying outpu
       ansible.builtin.debug:
