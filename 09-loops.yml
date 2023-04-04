@@ -4,10 +4,9 @@
    - name: PRinting a loop
      ansible.builtin.debug:
       msg: Value of Loop is "{{item}}"
-    loop:
-     - 10
-     - 20
-     - 30
-     - 40
-     - 50
-     
+     loop:
+      - 10
+      - 20
+      - 30
+      - 40
+      - 50
